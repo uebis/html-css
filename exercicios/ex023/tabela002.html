@@ -10,8 +10,9 @@
         }
 
         table {
-            width: 500px;
+            width: 400px;
             border-collapse: collapse;
+            position: relative;
         }
 
         caption {
@@ -28,13 +29,23 @@
             padding: 10px;
         }
 
-        tbody tr:nth-child(even) {
+        tbody tr:nth-child(even) { /* 2n */
             background-color: lightgray;
+        }
+
+        tbody tr:nth-child(odd) { /* 2n-1 */
+            background-color: white;
         }
 
         thead, tfoot {
             background-color: gray;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
         }
 
         td.num {
@@ -59,7 +70,7 @@
         <thead>
             <tr>
                 <th scope="col">Estado</th>
-                <th scope="col" width="70px">População</th>
+                <th scope="col" width="100px">População</th>
             </tr>
         </thead>
         <tbody>
